@@ -1,0 +1,17 @@
+[
+  {"id": "SKU-001", "name": "Wireless Noise-Cancelling Headphones", "category": "Electronics", "cost": 45.00, "current_price": 89.99},
+  {"id": "SKU-002", "name": "Yoga Mat Pro", "category": "Fitness", "cost": 12.00, "current_price": 34.99},
+  {"id": "SKU-003", "name": "Stainless Steel Water Bottle 1L", "category": "Kitchen", "cost": 6.50, "current_price": 19.99},
+  {"id": "SKU-004", "name": "Bluetooth Portable Speaker", "category": "Electronics", "cost": 22.00, "current_price": 59.99},
+  {"id": "SKU-005", "name": "Resistance Band Set (5 levels)", "category": "Fitness", "cost": 8.00, "current_price": 24.99},
+  {"id": "SKU-006", "name": "Bamboo Cutting Board", "category": "Kitchen", "cost": 9.00, "current_price": 29.99},
+  {"id": "SKU-007", "name": "USB-C Fast Charger 65W", "category": "Electronics", "cost": 11.00, "current_price": 29.99},
+  {"id": "SKU-008", "name": "Running Shoes - Lightweight (M)", "category": "Footwear", "cost": 38.00, "current_price": 79.99},
+  {"id": "SKU-009", "name": "Foam Roller - Deep Tissue", "category": "Fitness", "cost": 10.00, "current_price": 27.99},
+  {"id": "SKU-010", "name": "Insulated Lunch Box", "category": "Kitchen", "cost": 7.00, "current_price": 22.99},
+  {"id": "SKU-011", "name": "Smart LED Desk Lamp", "category": "Electronics", "cost": 18.00, "current_price": 44.99},
+  {"id": "SKU-012", "name": "Hiking Boots - Waterproof (M)", "category": "Footwear", "cost": 55.00, "current_price": 119.99},
+  {"id": "SKU-013", "name": "Protein Shaker Bottle", "category": "Fitness", "cost": 4.50, "current_price": 14.99},
+  {"id": "SKU-014", "name": "Air Fryer 3.5L", "category": "Kitchen", "cost": 35.00, "current_price": 79.99},
+  {"id": "SKU-015", "name": "Wireless Ergonomic Mouse", "category": "Electronics", "cost": 14.00, "current_price": 39.99}
+]

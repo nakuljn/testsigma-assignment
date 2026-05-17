@@ -160,8 +160,8 @@ class TestMockStore:
     def test_store_loads_seed_data(self):
         from ecom_ops.data.store import MockStore
         store = MockStore()
-        assert len(store.get_catalog()) == 15
-        assert len(store.get_inventory()) == 15
+        assert len(store.get_catalog()) == 6
+        assert len(store.get_inventory()) == 6
         history = store.get_sales_history()
         assert "SKU-001" in history
         assert len(history["SKU-001"]) == 30

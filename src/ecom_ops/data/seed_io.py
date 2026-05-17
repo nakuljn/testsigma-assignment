@@ -7,9 +7,26 @@ import shutil
 from pathlib import Path
 from typing import Any
 
-from ecom_ops.config.settings import DATA_DIR
+from ecom_ops.config.settings import DATA_DIR, ROOT_DIR
 
 SEED_FILES = ("catalog.json", "inventory.json", "sales_history.json", "reviews.json")
+DEMO_SEED_DIR = ROOT_DIR / "data" / "seed" / "demo"
+FULL_SEED_DIR = ROOT_DIR / "data" / "seed" / "full"
+SeedProfile = str  # "demo" | "full"
+
+
+def copy_seed_profile(profile: SeedProfile) -> None:
+    """Replace active data/seed/*.json from demo (6 SKUs) or full (15 SKUs) profile."""
+    src = DEMO_SEED_DIR if profile == "demo" else FULL_SEED_DIR
+    if not src.is_dir():
+        raise FileNotFoundError(f"Seed profile directory missing: {src}")
+    for name in SEED_FILES:
+        shutil.copy2(src / name, DATA_DIR / name)
+
+
+def active_sku_count() -> int:
+    catalog = load_seed_file("catalog.json")
+    return len(catalog) if isinstance(catalog, list) else 0
 
 
 def load_seed_file(name: str) -> Any:

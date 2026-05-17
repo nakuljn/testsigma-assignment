@@ -21,12 +21,26 @@ if "run_error" not in st.session_state:
 
 with st.sidebar:
     st.subheader("Run settings")
+    from ecom_ops.data.seed_io import active_sku_count, copy_seed_profile
+
+    seed_profile = st.radio(
+        "Dataset",
+        options=["demo", "full"],
+        format_func=lambda p: f"Demo (6 SKUs)" if p == "demo" else "Full (15 SKUs)",
+        index=0,
+        help="Demo is default for fast runs. Full restores the original catalog.",
+    )
+    if st.session_state.get("_seed_profile") != seed_profile:
+        copy_seed_profile(seed_profile)
+        st.session_state["_seed_profile"] = seed_profile
+    st.caption(f"Active catalog: **{active_sku_count()}** SKUs")
+
     provider = st.selectbox("LLM provider", ["openai", "anthropic"], index=0)
     run_date = st.date_input("Run date", value=date.today())
     fast_mode = st.checkbox(
         "Fast mode",
         value=True,
-        help="Batched LLM (~5 API calls) + no web search. Best for live demos.",
+        help="Batched LLM (~5 API calls) + no web search. Uncheck for live web search + per-SKU LLM.",
     )
     run_btn = st.button("Run pipeline", type="primary", use_container_width=True)
     st.caption("Requires OPENAI_API_KEY or ANTHROPIC_API_KEY in .env")

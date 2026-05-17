@@ -34,7 +34,15 @@ def main() -> None:
         "--fast", action="store_true",
         help="Skip competitor web search (faster demo; demand-only pricing).",
     )
+    parser.add_argument(
+        "--full-seed", action="store_true",
+        help="Use the 15-SKU full catalog (default is 6-SKU demo seed).",
+    )
     args = parser.parse_args()
+
+    if args.full_seed:
+        from ecom_ops.data.seed_io import copy_seed_profile
+        copy_seed_profile("full")
 
     if args.provider:
         os.environ["MODEL_PROVIDER"] = args.provider
@@ -43,21 +51,27 @@ def main() -> None:
         os.environ["BATCH_LLM"] = "1"
 
     from ecom_ops.config.settings import BATCH_LLM, MODEL_PROVIDER, OUTPUT_DIR, SKIP_WEB_SEARCH
+    from ecom_ops.data.seed_io import active_sku_count
     from ecom_ops.graph.ops_graph import run_daily_cycle
 
     provider = args.provider or MODEL_PROVIDER
     run_date = args.date
+    sku_count = active_sku_count()
 
     print("=" * 60)
     print("  Agentic E-Commerce Operations Manager")
     print("=" * 60)
     print(f"  Run date     : {run_date or 'today'}")
+    print(f"  Catalog      : {sku_count} SKUs")
     print(f"  Provider     : {provider}")
     print(f"  Web search   : {'off (--fast)' if SKIP_WEB_SEARCH else 'on (max 3 SKUs, 15s timeout each)'}")
     print(f"  LLM mode     : {'batched (~5 calls)' if BATCH_LLM else 'per-SKU (slower)'}")
     print("=" * 60)
     print()
-    est = "30–90 sec" if BATCH_LLM else "2–5 min"
+    if BATCH_LLM:
+        est = "20–60 sec" if sku_count <= 6 else "30–90 sec"
+    else:
+        est = "1–3 min" if sku_count <= 6 else "5–15 min"
     print(f"Running pipeline — progress below (est. {est}):")
     print()
 

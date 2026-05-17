@@ -16,7 +16,7 @@ make setup
 cp .env.example .env
 # Edit .env and set OPENAI_API_KEY (or ANTHROPIC_API_KEY + MODEL_PROVIDER=anthropic)
 
-# 3. Run the full daily cycle (fast demo: ~30–90 sec)
+# 3. Run the daily cycle (6-SKU demo seed; fast: ~20–60 sec)
 make demo FAST=1
 
 # 4. Launch the Streamlit interviewer dashboard
@@ -34,21 +34,32 @@ Three pages:
 
 | Page | What to show |
 |------|----------------|
-| **Run** | Live agent pipeline — each agent card shows status (pending / running / done) and a scrolling log. Inventory + Customer Insight run in parallel. Enable **Fast mode** (batched LLM, no web search). |
-| **Store data** | Edit `catalog`, `inventory`, `sales_history`, `reviews` — saves to `data/seed/`. Try lowering stock on SKU-001 or bad reviews on SKU-008 before running. |
+| **Run** | Pick **Demo (6 SKUs)** or **Full (15 SKUs)**. Live agent cards + logs. **Fast mode** = batched LLM, no web search. Uncheck Fast for live DuckDuckGo competitor search (max 3 SKUs). |
+| **Store data** | Edit seed JSON — saves to `data/seed/`. Demo seed: SKU-001 low stock + quality issues, SKU-003 critical restock, SKU-006 declining sales. |
 | **Results** | KPIs, conflict ledger, per-agent tabs, downloadable Markdown report in `output/`. |
 
 Suggested 2-minute walkthrough:
 
-1. **Store data** — show SKU-001 low stock or SKU-008 sizing reviews (seeded for conflicts).
-2. **Run** — Fast mode on, click **Run pipeline**, narrate agent boxes lighting up.
+1. **Store data** — show SKU-001 low stock / defect reviews (marketing suppression).
+2. **Run** — Demo dataset, Fast mode on → run; then uncheck Fast and re-run to show live web search.
 3. **Results** — open Conflict ledger, then Full Report tab.
+
+### Seed data profiles
+
+| Profile | Location | SKUs |
+|---------|----------|------|
+| **Demo** (default) | `data/seed/` + `data/seed/demo/` | 6 — tuned for conflicts, fast LLM runs |
+| **Full** | `data/seed/full/` | 15 — original assignment catalog |
+
+Switch in the dashboard **Run** page, or CLI: `python run.py --full-seed`.
 
 ### CLI (no UI)
 
 ```bash
-make demo FAST=1              # batched LLM, skips web search
+make demo FAST=1              # 6 SKUs, batched LLM, no web search
 python run.py --fast --print-report
+python run.py --print-report  # live APIs: web search + per-SKU LLM (~1–3 min on demo)
+python run.py --full-seed --fast   # 15-SKU catalog (slower)
 ```
 
 ## Architecture
@@ -139,7 +150,9 @@ testsigma-assignment/
 │   ├── graph/ops_graph.py    # LangGraph wiring
 │   ├── data/                 # MockStore + seed_io
 │   └── dashboard/            # Streamlit multipage app
-├── data/seed/                # catalog, inventory, sales_history, reviews JSON
+├── data/seed/                # active seed (demo 6 SKUs by default)
+│   ├── demo/                 # canonical demo profile
+│   └── full/                 # 15-SKU full profile
 ├── output/                   # Generated daily_ops_YYYY-MM-DD.md
 ├── tests/
 ├── run.py                    # CLI entrypoint

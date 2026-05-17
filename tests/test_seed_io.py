@@ -4,6 +4,8 @@ import pytest
 from pathlib import Path
 
 from ecom_ops.data.seed_io import (
+    active_sku_count,
+    copy_seed_profile,
     load_seed_file,
     save_seed_file,
     validate_catalog,
@@ -11,9 +13,16 @@ from ecom_ops.data.seed_io import (
 )
 
 
-def test_load_catalog_has_15_skus():
-    catalog = load_seed_file("catalog.json")
-    assert len(catalog) == 15
+def test_load_catalog_demo_has_6_skus():
+    assert active_sku_count() == 6
+
+
+def test_copy_seed_profile_full_has_15_skus():
+    copy_seed_profile("full")
+    try:
+        assert active_sku_count() == 15
+    finally:
+        copy_seed_profile("demo")
 
 
 def test_validate_catalog_rejects_bad_row():
