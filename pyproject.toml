@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ecom-ops"
+version = "0.1.0"
+description = "Agentic E-Commerce Operations Manager"
+requires-python = ">=3.10"
+dependencies = [
+    "langgraph>=0.2.0",
+    "langchain>=0.3.0",
+    "langchain-openai>=0.2.0",
+    "langchain-anthropic>=0.2.0",
+    "langchain-community>=0.3.0",
+    "pydantic>=2.0.0",
+    "python-dotenv>=1.0.0",
+    "streamlit>=1.39.0",
+    "tavily-python>=0.5.0",
+    "duckduckgo-search>=6.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.24.0",
+]
+
+[project.scripts]
+ecom-ops = "ecom_ops.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+asyncio_mode = "strict"

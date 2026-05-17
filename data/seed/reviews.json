@@ -1,0 +1,179 @@
+[
+  {
+    "sku": "SKU-001",
+    "reviews": [
+      {"rating": 2, "text": "The headband broke after 2 weeks. Plastic quality is very poor.", "verified_purchase": true},
+      {"rating": 1, "text": "Mine stopped working after the first charge cycle. Completely dead.", "verified_purchase": true},
+      {"rating": 2, "text": "Sound is okay but the ear cups fell off. Total quality failure.", "verified_purchase": true},
+      {"rating": 1, "text": "Third unit I have received — all three had the same defect on the left driver.", "verified_purchase": true},
+      {"rating": 3, "text": "Decent sound but build quality is questionable for the price.", "verified_purchase": false}
+    ],
+    "returns": [
+      {"reason": "product_defect", "sku": "SKU-001"},
+      {"reason": "product_defect", "sku": "SKU-001"},
+      {"reason": "product_defect", "sku": "SKU-001"},
+      {"reason": "not_as_described", "sku": "SKU-001"}
+    ],
+    "total_units_sold": 42
+  },
+  {
+    "sku": "SKU-002",
+    "reviews": [
+      {"rating": 5, "text": "Best yoga mat I have owned. Great grip and thickness.", "verified_purchase": true},
+      {"rating": 4, "text": "Good quality, arrived on time. Minor smell faded quickly.", "verified_purchase": true},
+      {"rating": 5, "text": "Perfect for hot yoga. Non-slip surface works great.", "verified_purchase": true}
+    ],
+    "returns": [],
+    "total_units_sold": 38
+  },
+  {
+    "sku": "SKU-003",
+    "reviews": [
+      {"rating": 5, "text": "Keeps water cold for 24h. Love it.", "verified_purchase": true},
+      {"rating": 4, "text": "Solid bottle, lid is a bit stiff but functional.", "verified_purchase": true},
+      {"rating": 5, "text": "Great value for money, no leaks.", "verified_purchase": true},
+      {"rating": 3, "text": "The lid cracked after 3 months but the bottle itself is fine.", "verified_purchase": true}
+    ],
+    "returns": [
+      {"reason": "product_defect", "sku": "SKU-003"}
+    ],
+    "total_units_sold": 85
+  },
+  {
+    "sku": "SKU-004",
+    "reviews": [
+      {"rating": 5, "text": "Incredible bass for its size. Very happy.", "verified_purchase": true},
+      {"rating": 4, "text": "Good sound, battery life could be better.", "verified_purchase": true},
+      {"rating": 5, "text": "Paired easily, sound is clear.", "verified_purchase": true},
+      {"rating": 4, "text": "Great portable speaker. Volume goes quite high.", "verified_purchase": true}
+    ],
+    "returns": [],
+    "total_units_sold": 123
+  },
+  {
+    "sku": "SKU-005",
+    "reviews": [
+      {"rating": 4, "text": "Good resistance levels, well made.", "verified_purchase": true},
+      {"rating": 3, "text": "Bands stretch fine but the lightest one snapped after a month.", "verified_purchase": true},
+      {"rating": 4, "text": "Exactly what I needed for home workouts.", "verified_purchase": true}
+    ],
+    "returns": [
+      {"reason": "product_defect", "sku": "SKU-005"}
+    ],
+    "total_units_sold": 24
+  },
+  {
+    "sku": "SKU-006",
+    "reviews": [
+      {"rating": 4, "text": "Beautiful board, very sturdy.", "verified_purchase": true},
+      {"rating": 5, "text": "Perfect size for meal prep. Easy to clean.", "verified_purchase": true},
+      {"rating": 3, "text": "Good board but shipped without the groove I saw in the listing photo.", "verified_purchase": true}
+    ],
+    "returns": [],
+    "total_units_sold": 44
+  },
+  {
+    "sku": "SKU-007",
+    "reviews": [
+      {"rating": 5, "text": "Charges my laptop in 30 minutes. Excellent.", "verified_purchase": true},
+      {"rating": 5, "text": "Works with all my devices. Very fast.", "verified_purchase": true},
+      {"rating": 4, "text": "Compact and powerful. Good value.", "verified_purchase": true},
+      {"rating": 5, "text": "Best charger I have bought. No heat issues.", "verified_purchase": true}
+    ],
+    "returns": [],
+    "total_units_sold": 157
+  },
+  {
+    "sku": "SKU-008",
+    "reviews": [
+      {"rating": 2, "text": "Runs 1.5 sizes too small. Very misleading size chart on the listing.", "verified_purchase": true},
+      {"rating": 2, "text": "Ordered my usual size — way too tight. Had to return.", "verified_purchase": true},
+      {"rating": 1, "text": "Terrible sizing. The product description says true-to-size but it absolutely is not.", "verified_purchase": true},
+      {"rating": 3, "text": "Nice design but the sizing is completely off.", "verified_purchase": true},
+      {"rating": 2, "text": "Third pair I tried in different sizes, none fit right. Giving up.", "verified_purchase": true}
+    ],
+    "returns": [
+      {"reason": "wrong_size", "sku": "SKU-008"},
+      {"reason": "wrong_size", "sku": "SKU-008"},
+      {"reason": "wrong_size", "sku": "SKU-008"},
+      {"reason": "not_as_described", "sku": "SKU-008"},
+      {"reason": "wrong_size", "sku": "SKU-008"}
+    ],
+    "total_units_sold": 60
+  },
+  {
+    "sku": "SKU-009",
+    "reviews": [
+      {"rating": 4, "text": "Works well for back and leg recovery.", "verified_purchase": true},
+      {"rating": 3, "text": "Decent foam roller, nothing special.", "verified_purchase": true},
+      {"rating": 4, "text": "Good firmness. Does what it says.", "verified_purchase": true}
+    ],
+    "returns": [],
+    "total_units_sold": 28
+  },
+  {
+    "sku": "SKU-010",
+    "reviews": [
+      {"rating": 4, "text": "Keeps lunch warm until noon. Good size.", "verified_purchase": true},
+      {"rating": 5, "text": "Perfect for kids school lunches.", "verified_purchase": true},
+      {"rating": 4, "text": "Insulation is great, easy to clean.", "verified_purchase": true}
+    ],
+    "returns": [],
+    "total_units_sold": 54
+  },
+  {
+    "sku": "SKU-011",
+    "reviews": [
+      {"rating": 5, "text": "Love the dimmer and colour temperature settings.", "verified_purchase": true},
+      {"rating": 4, "text": "Elegant lamp, app works well.", "verified_purchase": true},
+      {"rating": 5, "text": "Great for late night reading. Eyes feel less tired.", "verified_purchase": true}
+    ],
+    "returns": [],
+    "total_units_sold": 69
+  },
+  {
+    "sku": "SKU-012",
+    "reviews": [
+      {"rating": 5, "text": "Very waterproof — wore them in heavy rain and feet stayed dry.", "verified_purchase": true},
+      {"rating": 4, "text": "Comfortable right out of the box, no break-in needed.", "verified_purchase": true},
+      {"rating": 5, "text": "Excellent traction on muddy trails.", "verified_purchase": true}
+    ],
+    "returns": [],
+    "total_units_sold": 33
+  },
+  {
+    "sku": "SKU-013",
+    "reviews": [
+      {"rating": 3, "text": "Leaks from the lid after a few months.", "verified_purchase": true},
+      {"rating": 2, "text": "Lid broke within the first week. Poor plastic quality.", "verified_purchase": true},
+      {"rating": 3, "text": "OK for the price but lid design is weak.", "verified_purchase": true},
+      {"rating": 4, "text": "Works fine so far, decent shaker.", "verified_purchase": true}
+    ],
+    "returns": [
+      {"reason": "product_defect", "sku": "SKU-013"},
+      {"reason": "product_defect", "sku": "SKU-013"}
+    ],
+    "total_units_sold": 12
+  },
+  {
+    "sku": "SKU-014",
+    "reviews": [
+      {"rating": 5, "text": "Makes incredibly crispy fries with almost no oil.", "verified_purchase": true},
+      {"rating": 5, "text": "Changed how I cook. Use it daily.", "verified_purchase": true},
+      {"rating": 4, "text": "Easy to clean, heats evenly.", "verified_purchase": true},
+      {"rating": 5, "text": "Great capacity for a family of three.", "verified_purchase": true}
+    ],
+    "returns": [],
+    "total_units_sold": 114
+  },
+  {
+    "sku": "SKU-015",
+    "reviews": [
+      {"rating": 5, "text": "Very comfortable for all-day use. Precise tracking.", "verified_purchase": true},
+      {"rating": 4, "text": "Battery lasts 3 months. Solid ergonomic design.", "verified_purchase": true},
+      {"rating": 5, "text": "No wrist pain since switching to this mouse.", "verified_purchase": true}
+    ],
+    "returns": [],
+    "total_units_sold": 47
+  }
+]

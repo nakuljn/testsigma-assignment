@@ -1,0 +1,17 @@
+[
+  {"sku": "SKU-001", "stock_level": 8,   "reorder_point": 20, "lead_time_days": 7},
+  {"sku": "SKU-002", "stock_level": 145, "reorder_point": 30, "lead_time_days": 5},
+  {"sku": "SKU-003", "stock_level": 4,   "reorder_point": 50, "lead_time_days": 3},
+  {"sku": "SKU-004", "stock_level": 32,  "reorder_point": 25, "lead_time_days": 7},
+  {"sku": "SKU-005", "stock_level": 210, "reorder_point": 40, "lead_time_days": 5},
+  {"sku": "SKU-006", "stock_level": 18,  "reorder_point": 20, "lead_time_days": 4},
+  {"sku": "SKU-007", "stock_level": 55,  "reorder_point": 30, "lead_time_days": 3},
+  {"sku": "SKU-008", "stock_level": 6,   "reorder_point": 25, "lead_time_days": 10},
+  {"sku": "SKU-009", "stock_level": 180, "reorder_point": 25, "lead_time_days": 5},
+  {"sku": "SKU-010", "stock_level": 72,  "reorder_point": 30, "lead_time_days": 4},
+  {"sku": "SKU-011", "stock_level": 14,  "reorder_point": 20, "lead_time_days": 6},
+  {"sku": "SKU-012", "stock_level": 5,   "reorder_point": 15, "lead_time_days": 12},
+  {"sku": "SKU-013", "stock_level": 320, "reorder_point": 60, "lead_time_days": 3},
+  {"sku": "SKU-014", "stock_level": 22,  "reorder_point": 15, "lead_time_days": 7},
+  {"sku": "SKU-015", "stock_level": 9,   "reorder_point": 20, "lead_time_days": 5}
+]
